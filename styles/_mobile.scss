@@ -1,0 +1,96 @@
+.card {
+  width: 90%;
+  max-width: 365px;
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 80%;
+  margin: 0 auto;
+  background: white;
+  position: relative;
+  .hero {
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .card-body {
+    width: 85%;
+    height: 80%;
+    margin: 0 auto;
+    line-height: 1.2;
+    h3 {
+      color: $Dark-Grayish-Blue;
+      padding-top: 1.5em;
+      font-weight: 700;
+    }
+    p {
+      color: $Desaturated-Dark-Blue;
+      padding: 1rem 0;
+    }
+  }
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    .person {
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    .name {
+      h4 {
+        color: $Dark-Grayish-Blue;
+        justify-self: flex-start;
+      }
+      p {
+        padding: 0.25em 0;
+        color: $Grayish-Blue;
+      }
+    }
+
+    .share {
+      width: 35px;
+      height: 35px;
+      background: $Light-Grayish-Blue;
+      border-radius: 50%;
+      img {
+        transform: translate(65%, 65%);
+      }
+      z-index: 1;
+    }
+  }
+  .social {
+    color: $Light-Grayish-Blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: lighter;
+    letter-spacing: 0.25em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background: $Dark-Grayish-Blue;
+
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-21rem);
+    &.active {
+      transform: translateX(0rem);
+    }
+    p {
+      padding: 0 1em;
+    }
+    .twitter {
+      padding: 0 0.5em;
+    }
+  }
+}
