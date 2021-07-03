@@ -1,0 +1,59 @@
+@media (min-width: 1360px) {
+  main {
+    width: 60vw;
+  }
+  .card {
+    display: flex;
+    max-width: 100%;
+
+    .hero {
+      img {
+        width: 95%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+
+    .card-body {
+      width: 85%;
+      height: 100%;
+      margin: 0 auto;
+      line-height: 1.2;
+      padding: 2em;
+      h3 {
+        color: $Dark-Grayish-Blue;
+        padding: 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      p {
+        color: $Desaturated-Dark-Blue;
+        padding: 1rem 0;
+      }
+    }
+    .profile {
+      justify-content: flex-start;
+      .name {
+        padding-right: 6rem;
+        padding-left: 1rem;
+      }
+      .share {
+        transform: translateX(1rem);
+      }
+    }
+    .social {
+      justify-content: space-evenly;
+      height: 50px;
+      width: 240px;
+      top: 50vh;
+      left: 65vw;
+      position: fixed;
+      border-radius: 0.5rem;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

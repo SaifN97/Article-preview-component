@@ -122,15 +122,37 @@ body {
   height: 70px;
   width: 100%;
   background: #48556a;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: translateX(-21rem);
-          transform: translateX(-21rem);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.card .social .tooltip-arrow {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.card .social .tooltip-arrow::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #48556a;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  left: 50%;
 }
 
 .card .social.active {
-  -webkit-transform: translateX(0rem);
-          transform: translateX(0rem);
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
 }
 
 .card .social p {
@@ -139,5 +161,70 @@ body {
 
 .card .social .twitter {
   padding: 0 0.5em;
+}
+
+@media (min-width: 1360px) {
+  main {
+    width: 60vw;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .card .hero img {
+    width: 95%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+  }
+  .card .card-body {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 1.2;
+    padding: 2em;
+  }
+  .card .card-body h3 {
+    color: #48556a;
+    padding: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .card .card-body p {
+    color: #6d7f97;
+    padding: 1rem 0;
+  }
+  .card .profile {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .card .profile .name {
+    padding-right: 6rem;
+    padding-left: 1rem;
+  }
+  .card .profile .share {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  .card .social {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 50px;
+    width: 240px;
+    top: 50vh;
+    left: 65vw;
+    position: fixed;
+    border-radius: 0.5rem;
+    opacity: 0;
+  }
+  .card .social.active {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

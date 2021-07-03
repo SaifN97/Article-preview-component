@@ -66,7 +66,26 @@
       z-index: 1;
     }
   }
+
   .social {
+    .tooltip-arrow {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+    }
+    .tooltip-arrow::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: $Dark-Grayish-Blue;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      left: 50%;
+    }
     color: $Light-Grayish-Blue;
     position: absolute;
     bottom: 0;
@@ -81,10 +100,10 @@
     width: 100%;
     background: $Dark-Grayish-Blue;
 
-    transition: all 0.5s ease-in-out;
-    transform: translateX(-21rem);
+    transition: all 0.25s ease-in-out;
+    transform: translateY(5rem);
     &.active {
-      transform: translateX(0rem);
+      transform: translateY(0rem);
     }
     p {
       padding: 0 1em;
